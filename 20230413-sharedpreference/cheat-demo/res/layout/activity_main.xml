@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/black" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/layout_status" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_brave" android:background="@drawable/layout_shape" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/layout_satan" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:textSize="18.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_brave" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="勇者" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <TextView android:textSize="14.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_brave_hp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HP: " />
+                <TextView android:textSize="14.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_brave_hp_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <TextView android:textSize="14.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_brave_attack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="攻撃力: " />
+                <TextView android:textSize="14.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_brave_attack_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <TextView android:textSize="14.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_brave_defence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="防御力: " />
+                <TextView android:textSize="14.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_brave_defence_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/layout_satan" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/layout_brave" app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_satan_status" android:background="@drawable/layout_shape" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <TextView android:textSize="18.0dip" android:textColor="@color/whitesmoke" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="魔王" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/layout_satan_status">
+                <ImageView android:id="@id/image_satan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@mipmap/sozai_image_maou" android:adjustViewBounds="true" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:id="@id/layout_command" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/layout_status">
+        <Button android:id="@id/button_turn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="戦闘ターン" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Button android:id="@id/button_next" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="もう一度闘う" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView android:textSize="16.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_cornerman" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="戦闘ターンボタンを押してください" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/layout_command" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/whitesmoke" android:id="@id/text_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="勇者3勝 : 魔王2勝" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/text_cornerman" />
+</androidx.constraintlayout.widget.ConstraintLayout>
